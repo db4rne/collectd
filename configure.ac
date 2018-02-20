@@ -6143,6 +6143,7 @@ plugin_mcelog="no"
 plugin_memory="no"
 plugin_multimeter="no"
 plugin_nfs="no"
+plugin_nl80211="no"
 plugin_numa="no"
 plugin_ovs_events="no"
 plugin_ovs_stats="no"
@@ -6587,6 +6588,7 @@ AC_PLUGIN([netlink],             [$with_libmnl],            [Enhanced Linux netw
 AC_PLUGIN([network],             [yes],                     [Network communication plugin])
 AC_PLUGIN([nfs],                 [$plugin_nfs],             [NFS statistics])
 AC_PLUGIN([nginx],               [$with_libcurl],           [nginx statistics])
+AC_PLUGIN([nl80211],             [yes],                     [Linux wireless statistics])
 AC_PLUGIN([notify_desktop],      [$with_libnotify],         [Desktop notifications])
 AC_PLUGIN([notify_email],        [$with_libesmtp],          [Email notifier])
 AC_PLUGIN([notify_nagios],       [yes],                     [Nagios notification plugin])
@@ -7006,6 +7008,7 @@ AC_MSG_RESULT([    netlink . . . . . . . $enable_netlink])
 AC_MSG_RESULT([    network . . . . . . . $enable_network])
 AC_MSG_RESULT([    nfs . . . . . . . . . $enable_nfs])
 AC_MSG_RESULT([    nginx . . . . . . . . $enable_nginx])
+AC_MSG_RESULT([    nl80211 . . . . . . . $enable_nl80211])
 AC_MSG_RESULT([    notify_desktop  . . . $enable_notify_desktop])
 AC_MSG_RESULT([    notify_email  . . . . $enable_notify_email])
 AC_MSG_RESULT([    notify_nagios . . . . $enable_notify_nagios])

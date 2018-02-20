@@ -1206,6 +1206,15 @@ netlink_la_LDFLAGS = $(PLUGIN_LDFLAGS)
 netlink_la_LIBADD = $(BUILD_WITH_LIBMNL_LIBS)
 endif
 
+if BUILD_PLUGIN_NL80211
+pkglib_LTLIBRARIES += nl80211.la
+nl80211_la_SOURCES = src/collectd-nl80211.c
+nl80211_la_LDFLAGS = -module -avoid-version
+nl80211_la_CFLAGS = $(AM_CFLAGS) -I $(STAGING_DIR)/usr/include/libnl-tiny/
+nl80211_la_LIBADD = -lnl-tiny
+collectd_LDADD += "-dlopen" nl80211.la
+endif
+
 if BUILD_PLUGIN_NETWORK
 pkglib_LTLIBRARIES += network.la
 network_la_SOURCES = \
