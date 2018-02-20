@@ -1,5 +1,7 @@
 /* collectd headers */
 
+#define _GNU_SOURCE
+
 #include <linux/nl80211.h>
 #include <netlink/netlink.h>
 #include <netlink/socket.h>
