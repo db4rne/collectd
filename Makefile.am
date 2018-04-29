@@ -1212,8 +1212,6 @@ nl80211_la_SOURCES = src/collectd-nl80211.c
 nl80211_la_LDFLAGS = -module -avoid-version
 nl80211_la_CFLAGS = $(AM_CFLAGS) -I $(STAGING_DIR)/usr/include/libnl-tiny/
 nl80211_la_LIBADD = -lnl-tiny
-collectd_LDADD += "-dlopen" nl80211.la
-collectd_DEPENDENCIES = nl80211.la
 endif
 
 if BUILD_PLUGIN_NETWORK
